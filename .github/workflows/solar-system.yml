@@ -99,3 +99,6 @@ jobs:
 
           echo "Testing image url using wget"
           wget -q -O - 127.0.0.1:3000/live | grep live
+
+      - name: docker push
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/solar-system:${{ github.sha }}
