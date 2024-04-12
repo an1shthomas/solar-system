@@ -148,6 +148,6 @@ jobs:
 
       - name: fetch kubernetes cluster details
         run: |
-          kubectl version --short
+          kubectl version
           echo ---------------------------------
           kubectl get nodes -o wide
